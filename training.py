@@ -64,7 +64,7 @@ test_dataloader = DataLoader(test_dataset,
                              collate_fn=IMDBCollate(pad_idx=train_dataset.vocab['<PAD>']), 
                              num_workers=multiprocessing.cpu_count())
 
-model = RNN(input_dim=VOCABULARY_SIZE,
+model = LSTM(input_dim=VOCABULARY_SIZE,
             embedding_dim=EMBEDDING_DIM, 
             hidden_dim=HIDDEN_DIM, 
             output_dim=NUM_CLASSES, 
